@@ -1,0 +1,19 @@
+Dalam C, jika fungsi bertipe `void` dipanggil sebagai nilai di sisi kanan assignment, kode tersebut **tidak valid** karena fungsi itu tidak menghasilkan nilai untuk dimasukkan ke variabel.
+
+```c
+void tampilkan(void) {
+    printf("Halo\n");
+}
+
+int main(void) {
+    int hasil = tampilkan();  // Salah: fungsi tidak menghasilkan nilai
+}
+```
+
+Kompiler akan melaporkan kesalahan karena nilai bertipe `void` tidak dapat di-assign. Untuk menjalankan fungsinya, panggil saja tanpa assignment:
+
+```c
+tampilkan();
+```
+
+Catatan: menyimpan **alamat fungsi** (function pointer) ke variabel adalah hal berbeda; itu tidak menyimpan return value.

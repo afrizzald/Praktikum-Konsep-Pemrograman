@@ -1,0 +1,23 @@
+ Saya akan melihat konteks tugas dan berkas yang ditandai agar penjelasannya sesuai dengan materi C di repositori ini.
+
+
+#include <stdio.h>
+
+void tampilkanPesan(void) {
+    printf("Halo!\n");
+}
+
+int main(void) {
+    tampilkanPesan();  // dipanggil sebagai pernyataan
+    return 0;
+}
+ Tidak ada yang salah dengan fungsi yang **tidak mengembalikan nilai**. Dalam C, fungsi seperti ini biasanya bertipe `void`. Fungsinya tetap berguna untuk melakukan tindakan, misalnya menampilkan teks atau mengubah nilai melalui parameter pointer.
+
+ ```c
+ ```
+
+ `void` pada tipe fungsi berarti pemanggil tidak menerima nilai hasil. Jadi, pemanggilan seperti `int hasil = tampilkanPesan();` tidak tepat, karena `tampilkanPesan` tidak menghasilkan nilai untuk disimpan. Fungsi `void` boleh selesai tanpa `return`, atau memakai `return;` untuk mengakhiri fungsi lebih awal—tetapi tidak boleh mengembalikan nilai, seperti `return 5;`.
+
+ Yang penting, gunakan `void` hanya jika memang tidak perlu memberikan hasil kepada pemanggil. Jika pemanggil memerlukan hasil perhitungan, gunakan tipe yang sesuai, misalnya `int` atau `double`, dan kembalikan nilainya dengan `return`.
+
+ Berkas yang ditandai, `c1.c`, saat ini kosong, jadi penjelasan ini bersifat umum dan tidak menganalisis fungsi tertentu.

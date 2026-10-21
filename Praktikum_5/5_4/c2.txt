@@ -1,0 +1,21 @@
+ Jika fungsi mengembalikan nilai tetapi pemanggil tidak menyimpannya atau menggunakannya, nilai tersebut **diabaikan** setelah fungsi selesai. Ini bukan kesalahan dalam C; efek samping fungsi—misalnya mencetak teks atau mengubah data—tetap terjadi.
+
+ ```c
+int kuadrat(int angka) {
+    return angka * angka;
+}
+
+int main(void) {
+    kuadrat(5);  // nilai 25 dihitung, lalu diabaikan
+    return 0;
+}
+ ```
+
+ Jika hasilnya diperlukan, simpan ke variabel atau gunakan langsung:
+
+ ```c
+ int hasil = kuadrat(5);
+ printf("%d\n", kuadrat(5));
+ ```
+
+ Berkas `c2.c` masih kosong, jadi contoh di atas menjelaskan perilaku umumnya, bukan kode khusus dalam berkas tersebut.
