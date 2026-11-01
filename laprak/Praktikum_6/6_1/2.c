@@ -29,25 +29,22 @@ int main(void)
             continue;
         }
 
-        if (n <= jumlahSuku) {
-            printf("Deret yang sudah tersimpan: ");
-            for (int i = 0; i < n; i++) {
-                printf("%lld ", fibonacci[i]);
-            }
-            printf("\n");
-        } else {
-            printf("Suku Fibonacci baru: ");
+        if (n > jumlahSuku) {
             for (int i = jumlahSuku; i < n; i++) {
                 if (i < 2) {
                     fibonacci[i] = 1;
                 } else {
                     fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
                 }
-                printf("%lld ", fibonacci[i]);
             }
             jumlahSuku = n;
-            printf("\n");
         }
+
+        printf("Deret Fibonacci dari suku ke-1 sampai suku ke-%d: ", n);
+        for (int i = 0; i < n; i++) {
+            printf("%lld ", fibonacci[i]);
+        }
+        printf("\n");
 
         do {
             printf("Lanjut? (y/t): ");
@@ -59,8 +56,7 @@ int main(void)
                 lanjut != 't' && lanjut != 'T') {
                 printf("Masukkan y untuk lanjut atau t untuk berhenti.\n");
             }
-        } while (lanjut != 'y' && lanjut != 'Y' &&
-                 lanjut != 't' && lanjut != 'T');
+        } while (lanjut != 'y' && lanjut != 'Y' && lanjut != 't' && lanjut != 'T');
     }
 
     return 0;
